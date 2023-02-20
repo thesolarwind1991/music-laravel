@@ -1,0 +1,38 @@
+1. Как правильно "пушнуть" удаленный проект на локальную машину
+
+git remote add origin https://github.com/thesolarwind1991/music-laravel.git
+git branch -M main
+git push -u origin main
+
+
+2. Папки и файлы, которые записаны в .gitignore, которые нужно самостоятельно добавлять.
+В частности, это касается папки vendor
+
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+3. Скопировать .env.example и переименовать в .env. Настроить в файле подключение к существующей базе данных.
+
+4. Выполнить в командной строке команду artisan migration. 
+
+5. Открыть в браузере сайт ларавел, протестировать работу сайта
+
+6. Настроить в самом конце в файле config/I5-swagger имя хоста и почты пользователя
+
+7. Выполнить команду php artisan l5-swagger:generate
